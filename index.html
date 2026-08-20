@@ -1,115 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Dilemma Presentation Companion</title>
-    <!-- Link to your CSS file -->
+    <title>Simulador de Conciencia: IA vs Humano</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Final Task Part 1 & 2: What Makes Us Human?</h1>
-    
-    <div class="tabs">
-        <button id="btn-part1" class="tab-btn active">Part 1: Oral Presentation Guide</button>
-        <button id="btn-part2" class="tab-btn">Part 2: Video Q&A Notes</button>
+<div class="simulator-container">
+    <header>
+        <h1>Simulador Ético: ¿Quién debe educar?</h1>
+        <p class="subtitle">Haz clic en una situación escolar para ver la diferencia entre la IA y un Humano en tiempo real.</p>
+    </header>
+
+    <!-- Botones de Situaciones -->
+    <div class="scenario-selector">
+        <button class="scenario-btn active" data-scenario="scen1">Situación 1: Alumno triste</button>
+        <button class="scenario-btn" data-scenario="scen2">Situación 2: Tarea con errores</button>
+        <button class="scenario-btn" data-scenario="scen3">Situación 3: Explicar empatía</button>
     </div>
 
-    <!-- PART 1 SECTION -->
-    <div id="part1" class="content-section active">
-        <h2>AI Teacher Dilemma Requirements Checklist</h2>
-        <p>Check these off as your group covers them during practice or the live presentation:</p>
+    <!-- Panel de Simulación Bifurcado -->
+    <div class="simulation-grid">
         
-        <div class="item-row">
-            <input type="checkbox" id="check1">
-            <div class="text-group">
-                <label for="check1"><strong>Briefly explain the dilemma</strong></label>
-                <span>Replacing schoolteachers with fast, instant-correcting AI systems.</span>
+        <!-- LADO IA -->
+        <div class="panel ai-panel">
+            <div class="panel-header">
+                <span class="avatar">🤖</span>
+                <h2>Profesor IA (Algoritmo)</h2>
+            </div>
+            <div class="panel-body">
+                <div class="status-box">ESTADO: <span class="status-text">Procesando Datos...</span></div>
+                <div class="response-box" id="ai-response">
+                    <!-- Cambia dinámicamente -->
+                </div>
+                <div class="metric-bar">
+                    <span class="metric-label">Velocidad de Cómputo:</span>
+                    <div class="bar"><div class="fill high"></div></div>
+                </div>
+                <div class="metric-bar">
+                    <span class="metric-label">Empatía Real:</span>
+                    <div class="bar"><div class="fill zero"></div></div>
+                </div>
             </div>
         </div>
-        <div class="item-row">
-            <input type="checkbox" id="check2">
-            <div class="text-group">
-                <label for="check2"><strong>Explain both sides of the situation</strong></label>
-                <span>Pro: Fast, personal help. Con: Zero human contact and support.</span>
+
+        <!-- LADO HUMANO -->
+        <div class="panel human-panel">
+            <div class="panel-header">
+                <span class="avatar">👩‍🏫</span>
+                <h2>Profesor Humano (Conciencia)</h2>
+            </div>
+            <div class="panel-body">
+                <div class="status-box">ESTADO: <span class="status-text human-status">Sintiendo Emoción...</span></div>
+                <div class="response-box" id="human-response">
+                    <!-- Cambia dinámicamente -->
+                </div>
+                <div class="metric-bar">
+                    <span class="metric-label">Velocidad de Cómputo:</span>
+                    <div class="bar"><div class="fill low"></div></div>
+                </div>
+                <div class="metric-bar">
+                    <span class="metric-label">Empatía Real:</span>
+                    <div class="bar"><div class="fill max"></div></div>
+                </div>
             </div>
         </div>
-        <div class="item-row">
-            <input type="checkbox" id="check3">
-            <div class="text-group">
-                <label for="check3"><strong>Say what your group thinks should happen</strong></label>
-                <span>Keep human teachers but use AI as an assistant tool.</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <input type="checkbox" id="check4">
-            <div class="text-group">
-                <label for="check4"><strong>Give at least two reasons for your decision</strong></label>
-                <span>1. AI can't feel or care for sad students. 2. Real teachers inspire.</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <input type="checkbox" id="check5">
-            <div class="text-group">
-                <label for="check5"><strong>Mention one possible consequence</strong></label>
-                <span>If we choose only AI, schools will become lonely, isolated places.</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <input type="checkbox" id="check6">
-            <div class="text-group">
-                <label for="check6"><strong>Extra Challenge Scenario</strong></label>
-                <span>Even if AI teaches facts better, humans are still required for emotional safety.</span>
-            </div>
-        </div>
+
     </div>
 
-    <!-- PART 2 SECTION -->
-    <div id="part2" class="content-section">
-        <h2>TED-Ed Video Analysis Insights</h2>
-        <p>Key takeaways regarding AI capability and human limits:</p>
-
-        <div class="item-row">
-            <div class="text-group">
-                <strong>Can AI understand emotions, or can it only recognize them?</strong>
-                <span>It only recognizes data patterns. It cannot feel anything.</span>
-                <span class="badge">Answered</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <div class="text-group">
-                <strong>Can a machine understand an emotion without feeling it?</strong>
-                <span>No. It uses math and statistics to give labels, not real understanding.</span>
-                <span class="badge">Answered</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <div class="text-group">
-                <strong>Is recognizing sadness the same as feeling sad?</strong>
-                <span>No. Recognizing is analytical; feeling requires consciousness.</span>
-                <span class="badge">Answered</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <div class="text-group">
-                <strong>Could an AI ever truly care about a person?</strong>
-                <span>No. AI can only mimic or act like it cares using programming.</span>
-                <span class="badge">Answered</span>
-            </div>
-        </div>
-        <div class="item-row">
-            <div class="text-group">
-                <strong>If AI can imitate empathy perfectly, does it matter if empathy is not real?</strong>
-                <span>Yes. Fake empathy lacks genuine respect and leads to manipulation.</span>
-                <span class="badge">Answered</span>
-            </div>
-        </div>
-    </div>
+    <!-- Conclusión en tiempo real -->
+    <footer class="verdict-section">
+        <h3>Verdict Oral: ¿Qué nos hace humanos?</h3>
+        <p id="verdict-text">Cargando análisis del dilema...</p>
+    </footer>
 </div>
 
-<!-- Link to your JavaScript file -->
 <script src="script.js"></script>
 </body>
 </html>
